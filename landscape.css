@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face  {
+    font-family: 'montserrat';
+    src: url('./font/Montserrat-Regular.ttf');
+}
+
+
+
+body {
+    background-image: url('./img/back.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+
+
+#box-foto {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#fotografia {
+    width: 40vw;
+    height: 50vw;
+    margin: 5vw 0 0 0;
+    background-image: url('./img/perfil.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+#fotografia:before {
+    content: '';
+    width: 40vw;
+    height: 50vw;
+    position: absolute;
+    z-index: -1;
+    margin: 1vw 0 0 -1vw;
+    background-color: #00abff;
+}
+
+
+#nomes {
+    width: 65vw;
+    margin-left: 50%;
+    margin-top: 8vw;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: #00abff;
+    border-radius: 4px;
+    font-family: 'montserrat';
+}
+
+#nomes legend {
+    font-size: 4.5vw;
+    color: white;
+}
+
+#nomes h2 {
+    font-size: 7vw;
+}
+
+#opcoes {
+    width: 100vw;
+    display: grid;
+    margin-top: 5vw;
+    justify-content: center;
+}
+
+.box-opcoes {
+    width: 70vw;
+    height: 13vh;
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 4vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.box-opcoes:hover:before {
+    content: '';
+    width: 70vw;
+    height: 13vh;
+    background-color: orange;
+    position: absolute;
+    animation: loading 200ms linear;
+}
+
+@keyframes loading {
+    0% {
+        width: 0vw;
+    }
+    
+    100% {
+        width: 70vw;
+    }
+}
+
+
+
+.box-opcoes .icon {
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    margin-left: 1vw;
+}
+
+#iconUm {
+    background-image: url('./img/perfil.png');
+    background-size: cover;
+}
+
+#iconDois {
+    background-image: url('./img/projeto-de-arquitetura.png');
+    background-size: cover;
+}
+
+#iconTres {
+    background-image: url('./img/mapa.png');
+    background-size: cover;
+}
+
+#iconQuatro {
+    background-image: url('./img/whatsapp.png');
+    background-size: cover;
+}
+
+
+.box-opcoes legend {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-family: 'montserrat';
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    font-size: 4vw;
+}
